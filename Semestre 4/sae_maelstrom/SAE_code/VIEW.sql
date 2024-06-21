@@ -1,0 +1,1 @@
+CREATE MATERIALIZED VIEW personnes_annuaire as SELECT * FROM personnes ; 
