@@ -1,0 +1,228 @@
+/* Conteneur principal */
+.page-fond {
+    position: absolute;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 800%;
+  }
+  
+  .les-cartes-container {
+    padding: 90px;
+    margin: 150px;
+    bottom: 9rem;
+    background-color: #f4f4f4;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Modal pour afficher la carte */
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Contenu de la modal */
+  .modal-content {
+    position: relative;
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    height: 70%;
+    max-width: 1200px;
+    max-height: 500px;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  
+  /* Colonne gauche avec l'image et le nom */
+  .modal-left {
+    position: relative;
+    width: 110%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    padding-top: 0;
+  }
+  
+  /* Image agrandie dans la modal */
+  .modal-image {
+    width: 50%;
+    height: auto;
+    max-width: 52%;
+    max-height: 52%;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  /* Nom de la carte dans la modal */
+  .modal-left h3 {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  /* Colonne droite avec les détails de la carte */
+  .modal-right {
+    position: relative;
+    width: 110%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  
+  /* Détails de la carte */
+  .modal-right h2 {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .modal-right p {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Bouton de fermeture */
+  .close-button {
+    position: fixed;
+    top: 0;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    z-index: 1001;
+  }
+  
+  .close-button:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  .close-button:before {
+    content: "×";
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  /* Barre noire au milieu */
+  .modal-divider {
+    width: 2px; /* Largeur de la barre */
+    background-color: #888888;
+    height: 90%; /* Hauteur pour occuper tout l'espace disponible */
+    margin: 0 15px; /* Espacement entre les colonnes */
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      max-width: 90%;
+      padding: 10px;
+    }
+  
+    .modal-left h3 {
+      font-size: 1rem;
+    }
+  
+    .modal-image {
+      max-width: 70%;
+    }
+  
+    .modal-right h2 {
+      font-size: 1.2rem;
+    }
+  
+    .modal-right p {
+      font-size: 0.9rem;
+    }
+  
+    .bouton {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .modal-content {
+      width: 95%;
+    }
+  
+    .modal-image {
+      max-width: 60%;
+    }
+  
+    .modal-right p {
+      font-size: 0.8rem;
+    }
+  
+    .bouton {
+      padding: 6px;
+      font-size: 10px;
+    }
+  }
+  
+  .modal-right p strong {
+    margin-right: 5px;
+  }
+  
+  /* Style spécifique pour la quantité */
+  .modal-right p:has(strong:contains("X")) {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .card-quantity {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    font-weight: 900;
+    color: #000;
+    font-family: "Arial Black", Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  

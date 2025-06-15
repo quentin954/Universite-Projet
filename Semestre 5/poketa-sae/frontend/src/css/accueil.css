@@ -1,0 +1,193 @@
+/* Exemple de ciblage spécifique */
+* {
+  cursor: url('../img/pokeball.png'), auto;
+}
+
+/* Style de la section avec l'image de fond */
+.background {
+  background-image: url('../img/fondPokeball.jpg');
+  background-position: center center; /* Centrer l'image de fond */
+  background-size: cover; /* Couvre toute la section */
+  background-repeat: no-repeat;
+  height: 100vh; /* Hauteur de la section égale à la taille de la fenêtre */
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent pour améliorer la lisibilité */
+  display: flex;
+  justify-content: center; /* Centrer le contenu horizontalement */
+  align-items: center; /* Centrer le contenu verticalement */
+  color: white; /* Appliquer la couleur blanche au texte */
+  text-align: center; /* Centrer le texte à l'intérieur de la section */
+  background-blend-mode: overlay; /* Mélange l'image avec la couleur de fond */
+}
+
+/* Contenu de la section */
+.background-content {
+  padding: 20px;
+  max-width: 800px; /* Limite la largeur du texte pour ne pas qu'il soit trop étendu */
+}
+
+.header__title {
+  font-size: 3em; /* Taille du texte pour le titre */
+  font-weight: bold; /* Rendre le titre en gras */
+  margin-bottom: 20px; /* Ajouter un espace sous le titre */
+  margin-top: 300px; /* Déplace le titre un peu plus bas */
+}
+
+/* Style du paragraphe */
+.lead {
+  font-size: 1.2em; /* Taille du texte du paragraphe */
+  line-height: 1.5; /* Espacement entre les lignes */
+  max-width: 600px; /* Limite la largeur du texte pour plus de lisibilité */
+  margin: 0 auto; /* Centrer le paragraphe */
+  margin-top: 15px; /* Déplace le texte du paragraphe un peu plus bas */
+}
+
+/* Conteneur principal */
+.custom-container {
+  margin: 40px auto;
+  max-width: 960px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Section texte */
+.custom-text-section {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.custom-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(40, 43, 206);
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #0a26de, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* Section image */
+.custom-image-section {
+  flex-shrink: 0;
+}
+
+.custom-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.Acc-modal-overlay {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden; /* Modal caché par défaut */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  z-index: 9999; /* Pour que le modal soit au-dessus du reste du contenu */
+}
+
+.Acc-modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Acc-modal {
+  background-color: #1c1e26;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  color: #fff;
+  z-index: 10000; /* S'assurer que le modal reste au-dessus de l'overlay */
+}
+
+.Acc-modal h2 {
+  margin: 0 0 20px;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.Acc-modal p {
+  margin: 0 0 20px;
+  font-size: 1em;
+  color: #aaa;
+}
+
+.Acc-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.Acc-modal-buttons button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Acc-modal-buttons .Acc-create {
+  background-color: #f5f5f5;
+  color: #1c1e26;
+}
+
+.Acc-modal-buttons .Acc-create:hover {
+  background-color: #e0e0e0;
+}
+
+.Acc-modal-buttons .Acc-login {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.Acc-modal-buttons .Acc-login:hover {
+  background-color: #d62839;
+}
+
+.Acc-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #999;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s;
+}
+
+.Acc-close-btn:hover {
+  color: #fff;
+}

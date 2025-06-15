@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Fond principal */
+.modif-profil-container {
+  background-image: url('../img/dracau.jpeg'); /* Chemin vers votre image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 20px; /* Ajout de padding pour éviter le débordement */
+}
+
+/* Calque sombre semi-transparent */
+.modif-profil-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Calque encore plus sombre pour contraste optimal */
+  z-index: 1;
+}
+
+/* Container principal */
+.modif-profil-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Dégradé subtil */
+  padding: 35px;
+  border-radius: 16px; /* Arrondi plus prononcé pour modernité */
+  backdrop-filter: blur(20px); /* Plus de flou pour un effet "frosted glass" */
+  text-align: center;
+  width: 100%;
+  max-width: 360px; /* Taille réduite pour un design compact */
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Ombre élégante */
+  animation: fadeIn 0.8s ease-out; /* Animation d'apparition */
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre du formulaire */
+.modif-profil-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase; /* Style moderne en majuscules */
+  letter-spacing: 1.2px;
+}
+
+/* Labels */
+.modif-profil-form label {
+  color: #dcdcdc; /* Gris clair pour une meilleure lisibilité */
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Champs de saisie */
+.modif-profil-form input,
+.modif-profil-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure subtile */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15); /* Fond semi-transparent */
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modif-profil-form input:focus,
+.modif-profil-form textarea:focus {
+  border-color: #4caf50; /* Vert moderne */
+  box-shadow: 0 0 10px #4caf50; /* Effet lumineux */
+}
+
+/* Zone de texte pour la bio */
+.modif-profil-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Bouton "Enregistrer les modifications" */
+.modif-profil-submit-btn {
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Dégradé moderne */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px; /* Bouton arrondi élégant */
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre prononcée */
+  transition: all 0.4s ease;
+  width: 100%; /* Largeur totale */
+  margin-top: 15px;
+}
+
+.modif-profil-submit-btn:hover {
+  transform: translateY(-3px); /* Effet de levée */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+}
+
+.modif-profil-submit-btn:active {
+  transform: translateY(1px); /* Effet d'enfoncement */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modif-profil-card {
+    padding: 20px;
+    max-width: 90%; /* Plus compact pour mobile */
+  }
+
+  .modif-profil-title {
+    font-size: 20px;
+  }
+
+  .modif-profil-form input,
+  .modif-profil-form textarea {
+    font-size: 13px;
+  }
+
+  .modif-profil-submit-btn {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+
+
+
+
+/* Style du Modal */
+.profil_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.profil_modal-content {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profil_modal-content h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.profil_modal-content label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.profil_modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.profil_modal-content input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Boutons dans le modal */
+.profil_modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.profil_modal-save-btn {
+  flex: 1;
+  background-color: #4caf50; /* Vert */
+  color: #ffffff;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profil_modal-save-btn:hover {
+  background-color: #45a049;
+}
+
+.profil_modal-cancel-btn {
+  flex: 1;
+  background-color: #f44336; /* Rouge */
+  color: #ffffff;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profil_modal-cancel-btn:hover {
+  background-color: #e53935;
+}
+
+/* Icône pour fermer le modal */
+.profil_modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.profil_modal-close:hover {
+  color: #333;
+}

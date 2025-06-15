@@ -1,0 +1,177 @@
+/* Conteneur global */
+.profil_global-container {
+    background: url('../img/imagefond.jpeg') no-repeat center center fixed; /* Image centrée et fixe */
+    background-size: cover; /* L'image couvre tout l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw; /* Assure que le conteneur occupe toute la largeur de l'écran */
+    margin: 0; /* Supprime toute marge par défaut */
+    padding: 0; /* Supprime tout padding par défaut */
+}
+
+/* Conteneur principal */
+.profil_app-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Conteneur semi-transparent */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 95%;
+    max-width: 1400px; /* Conteneur agrandi */
+    display: flex;
+    overflow: hidden;
+}
+
+/* Dashboard */
+.profil_dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.profil_sidebar {
+    width: 250px;
+    background-color: rgba(74, 144, 226, 0.9);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profil_sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.profil_sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profil_sidebar li {
+    margin: 10px 0;
+}
+
+.profil_sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profil_sidebar a.active,
+.profil_sidebar a:hover {
+    background-color: #357ABD;
+}
+
+.profil_sidebar .profil_delivery {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profil_sidebar .profil_delivery button {
+    background-color: #fff;
+    color: #4A90E2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contenu principal */
+.profil_main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: rgba(249, 249, 249, 0.95);
+}
+
+.profil_main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profil_main-content .profil_search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Profil Info */
+.profil_profile-info {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profil_profile-info .profil_avatar img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profil_profile-info .profil_details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.profil_profile-info .profil_details button {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cartes Pokémon */
+.profil_section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profil_section-header h2 {
+    font-size: 1.5rem;
+}
+
+.profil_next-section {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #4A90E2;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profil_next-section:hover {
+    transform: scale(1.2);
+}
+
+.profil_cards {
+    display: flex;
+    gap: 20px;
+}
+
+.profil_card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+}
+
+.profil_card img {
+    max-width: 100%;
+    border-radius: 5px;
+}

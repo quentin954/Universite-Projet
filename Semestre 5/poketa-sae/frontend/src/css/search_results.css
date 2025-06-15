@@ -1,0 +1,42 @@
+.search-results-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.search-results-title p {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.carte-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.extension-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.symbol-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.carte-slot {
+  transition: transform 0.2s ease;
+}
+
+.carte-slot:hover {
+  transform: scale(1.05);
+} 

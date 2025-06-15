@@ -1,0 +1,173 @@
+/* Style de la barre de navigation */
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.bar img {
+  width: 180px;
+  cursor: pointer;
+}
+
+/* Barre de recherche au centre */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Style de la barre de recherche */
+.search-bar {
+  width: 55%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease; /* Pour l'animation */
+}
+
+/* Lorsque l'utilisateur commence à taper, ajout d'une bordure et élargissement */
+.search-bar.active {
+  width: 65%; /* Réduit légèrement la largeur en état actif */
+  border: 2px solid #FF9900; /* Bordure orange */
+  background-color: #fff7cc; /* Fond légèrement jaune */
+}
+
+/* Style des suggestions de recherche */
+.suggestions {
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%; /* Même largeur que la barre de recherche */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Ajuster la largeur des suggestions quand la barre de recherche est active */
+.search-bar.active + .suggestions {
+  width: 65%; /* S'adapte à la largeur de la barre de recherche active */
+}
+
+/* Chaque élément de suggestion */
+.suggestion-item {
+  padding: 5px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  min-height: 45px;
+}
+
+.suggestion-image {
+  width: 30px;
+  height: 42px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.suggestion-text {
+  font-size: 0.85rem;
+}
+
+.suggestion-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style de la partie droite de la barre */
+.bar-right {
+  display: flex;
+  gap: 30px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.bar a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.bar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Responsivité */
+@media screen and (max-width: 500px) {
+  .bar a {
+      float: none;
+      display: block;
+      text-align: left;
+      padding: 15px 20px;
+  }
+  .bar-right {
+      display: block;
+      float: none;
+      gap: 10px;
+  }
+}
+
+/* Mobile (max-width: 500px) */
+@media screen and (max-width: 500px) {
+  .bar {
+    flex-direction: column; /* Stack les éléments verticalement */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .search-container {
+    width: 100%; /* Barre de recherche prend tout l'espace */
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 90%; /* Ajuste la taille de la barre */
+  }
+
+  .bar-right {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0; /* Supprime l'espacement horizontal */
+    width: 100%; /* Centrage des boutons */
+    justify-content: center;
+  }
+
+  .bar a {
+    width: 90%; /* Boutons prennent toute la largeur */
+    text-align: center;
+  }
+}
+
+/* Tablettes (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 80%; /* Taille ajustée pour tablette */
+  }
+
+  .bar-right {
+    gap: 15px;
+  }
+}

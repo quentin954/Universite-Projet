@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Fond principal */
+.Conn-back {
+  background-image: url('../img/connection.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.Conn-background {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal */
+.Conn-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 320px;
+}
+
+/* Titres et textes */
+.Conn-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Conn-label {
+  color: #fff;
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.Conn-text {
+  color: #fff;
+  font-size: 14px;
+}
+
+.Conn-link {
+  color: #ff4b4b;
+  text-decoration: none;
+}
+
+/* Champs d'entrée */
+.Conn-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Options */
+.Conn-options {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.Conn-checkbox {
+  margin-right: 5px;
+}
+
+/* Bouton */
+.Conn-submit-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.Conn-submit-btn2 {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.Conn-submit-btn:hover {
+  background-color: #ff4b4b;
+  color: #fff;
+}

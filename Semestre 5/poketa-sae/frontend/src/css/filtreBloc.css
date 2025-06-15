@@ -1,0 +1,177 @@
+/* Filtre pour les blocs/extensions */
+.filtre-bloc {
+  position: absolute; /* Changed from fixed to absolute */
+  top: 340px; /* Changé de 320px à 340px */
+  left: -120px; /* Changé de -100px à -120px */
+  width: 200px; /* Augmenté de 150px à 200px */
+  z-index: 10;
+  background-color: transparent; /* Changé de #fff à transparent */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: none; /* Supprimé l'ombre */
+}
+
+.filtre-item {
+  margin-bottom: 0.1rem;
+  background: transparent; /* Rend le fond transparent */
+}
+
+.filtre-title {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #5b94de;
+  color: white;
+  text-align: left;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filtre-title:hover {
+  background-color: #0056b3;
+}
+  
+.extensions {
+  width: 100%;
+  border-color: #333;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  background: transparent; /* Rend le fond transparent */
+}
+/*pour animation d'ouverture*/
+.extensions.open {
+  max-height: 500px;
+  opacity: 1;
+  background-color: transparent;
+}
+.extension-item {
+  background-color: #fff;
+  border-color: #333;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-left: 1.2rem;
+  border: 1px solid #888888;
+  margin-bottom: -1px; /* Ajouté pour supprimer le gap entre les items */
+}
+
+.extension-item:first-child {
+  border-top: none; /* Supprime la bordure du haut pour le premier élément */
+}
+
+.extension-item:hover {
+  background-color: #e0e0e0;
+}
+.extension-logo img{
+  vertical-align: middle; 
+  width: 1rem; /* Légèrement plus petit */
+  height: 1rem; /* Taille réduite du logo */
+  
+}
+
+.extension-name {
+  font-size: 0.75rem; /* Légèrement plus petit */
+  color: #555; /* Couleur de texte gris foncé */
+  margin-left: 0.5rem; /* Réduit l'espacement */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  overflow: hidden; /* Cache le texte qui dépasse */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
+}
+ 
+  /* Conteneur principal pour les détails de l'extension */
+.extension-container {
+    position: relative;
+    background-color: #ffffff; /* Fond blanc */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Espacement intérieur */
+    width: 35rem; /* Largeur maximale */
+    height: 6rem;
+    margin: 20px auto; /* Centrage horizontal */
+    text-align: left; /* Alignement du texte à gauche */
+  }
+  
+  
+
+  /* Logo de l'extension */
+.extension-detail-logo {
+    align-items: center;
+    position: relative;
+    left: 1rem;
+    bottom: 1rem;
+    width: 10rem; 
+    height: 8rem; 
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 15px; /* Espacement sous le logo */
+    object-fit: contain; /* Ajuste l'image sans la recadrer */
+  }
+  /* Titre de l'extension */
+  .extension-detail-title {
+    position: relative;
+    bottom: 10rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Centrer le titre */
+  }
+
+  /* Informations de l'extension */
+.extension-info {
+    position: relative;
+    bottom: 10rem;
+    left: 20rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #555;
+  }
+  /* Style pour les paragraphes d'information */
+.extension-info p {
+    margin-bottom: 10px;
+  }
+
+
+  /* Media query pour les écrans moyens (tablettes) */
+@media (min-width: 768px) {
+  .filtre-bloc {
+    position: absolute; /* Ensure consistency across breakpoints */
+    width: 200px;
+    left: -120px; /* Mis à jour pour correspondre */
+    right: auto;
+    padding: 0;
+    top: 340px; /* Mis à jour pour correspondre */
+  }
+
+  .extension-container {
+    width: 70%; /* Plus large pour les tablettes */
+    padding: 20px;
+  }
+}
+
+/* Media query pour les écrans larges (ordinateurs) */
+@media (min-width: 1024px) {
+  .filtre-bloc {
+    position: absolute; /* Ensure consistency across breakpoints */
+    width: 200px;
+    left: -120px; /* Mis à jour pour correspondre */
+    right: auto;
+    top: 340px; /* Mis à jour pour correspondre */
+  }
+
+  .extension-container {
+    width: 35rem; /* Taille originale */
+    height: 6rem;
+  }
+}
+
+/* Ajuster les marges du conteneur principal */
+.les-cartes-container {
+  margin-left: 90px; /* Ajusté de 110px à 90px pour compenser le nouveau positionnement */
+}

@@ -1,0 +1,379 @@
+/* Conteneur principal */
+.page-fond {
+  position: absolute;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.les-cartes-container {
+  padding: 90px;
+  margin-left: 180px;
+  margin-top: 150px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.close-button:before {
+  content: "×";
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Grille des cartes */
+.cartes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Slot pour chaque carte */
+.carte-slot {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 150px;
+  height: 200px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.carte-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carte-slot:hover {
+  transform: scale(1.05);
+}
+
+/* Mise en forme du bouton "changer l'image" */
+.change-image-button {
+  padding: 8px 16px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.change-image-button:hover {
+  background-color: #005fa3;
+}
+
+/* Titre de la carte dans le carousel */
+.cartes-grid h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* STYLE des Types */
+.card-type {
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Types spécifiques avec des couleurs */
+.type-plante {
+  background-color: #7bbf3e;
+}
+
+.type-poison {
+  background-color: #9b4d97;
+}
+
+.type-feu {
+  background-color: #f44336;
+}
+
+.type-eau {
+  background-color: #2196F3;
+}
+
+.type-electrik {
+  background-color: #FFCA28;
+}
+
+.type-glace {
+  background-color: #00bcd4;
+}
+
+.type-combat {
+  background-color: #d32f2f;
+}
+
+.type-insecte {
+  background-color: #8bc34a;
+}
+
+.type-spectre {
+  background-color: #9c27b0;
+}
+
+.type-psy {
+  background-color: #9c27b0;
+}
+
+.type-vol {
+  background-color: #ff9800;
+}
+
+.type-dragon {
+  background-color: #3f51b5;
+}
+
+.type-fée {
+  background-color: #e91e63;
+}
+
+.type-métal {
+  background-color: #9e9e9e;
+}
+
+.type-obscur {
+  background-color: #424242;
+}
+
+.type-sol {
+  background-color: #8d6e63;
+}
+
+.type-acier {
+  background-color: #b0bec5;
+}
+
+.type-dark {
+  background-color: #212121;
+}
+
+/* Boutons de navigation */
+.nav-button.left {
+  top: 90%;
+  right: 52%;
+  width: 45%;
+  padding: 1px 16%;
+}
+
+.nav-button.right {
+  top: 90%;
+  left: 52%;
+  width: 45%;
+  padding: 1px 16%;
+}
+
+/* Boutons SUPPRIMER AJOUTER */
+.bouton {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding: 2px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bouton.ajouter {
+  top: 3.5rem;
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.bouton.ajouter:hover,
+.bouton.ajouter:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.bouton.ajouter:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.bouton.ajouter:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.bouton.supprimer {
+  top: 3.5rem;
+  background-color: #fce4e4;
+  border-radius: 3px;
+  border: 1px solid #f44336;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #f44336;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.bouton.supprimer:hover,
+.bouton.supprimer:focus {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.bouton.supprimer:focus {
+  box-shadow: 0 0 0 4px rgba(255, 99, 71, .15);
+}
+
+.bouton.supprimer:active {
+  background-color: #f1b0b7;
+  box-shadow: none;
+  color: #721c24;
+}
+
+/*voir les Affichage de quantité de carte */
+.quantity {
+  position: relative;
+  font-size: 30px;
+  color: #333;
+  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  left: 320px;
+  bottom: 190px;
+}
+
+.modal-divider {
+  width: 2px; /* Largeur de la barre */
+  background-color: #888888;
+  height: 90%; /* Hauteur pour occuper tout l'espace disponible */
+  margin: 0 15px; /* Espacement entre les colonnes */
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-width: 90%; /* Largeur plus petite */
+    padding: 10px;
+  }
+
+  .modal-left h3 {
+    font-size: 1rem; /* Réduit encore le titre */
+  }
+
+  .modal-image {
+    max-width: 70%; /* Limite la taille de l'image */
+  }
+
+  .modal-right h2 {
+    font-size: 1.2rem; /* Réduit légèrement la taille du titre */
+  }
+
+  .modal-right p {
+    font-size: 0.9rem; /* Réduit encore la taille du texte */
+  }
+
+  .bouton {
+    font-size: 12px; /* Réduit la taille des boutons */
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%; /* Largeur maximale pour très petits écrans */
+  }
+
+  .modal-image {
+    max-width: 60%; /* Réduction supplémentaire de l'image */
+  }
+
+  .modal-right p {
+    font-size: 0.8rem; /* Texte encore plus petit */
+  }
+
+  .bouton {
+    padding: 6px;
+    font-size: 10px; /* Texte réduit pour les très petits écrans */
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-button {
+    width: 30px; /* Taille réduite pour les petits écrans */
+    height: 30px;
+  }
+  .nav-button.left {
+    left: 5%; /* Réduit l'écart à gauche */
+  }
+  .nav-button.right {
+    right: 5%; /* Réduit l'écart à droite */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-button {
+    width: 25px; /* Taille encore plus petite */
+    height: 25px;
+  }
+  .nav-button.left {
+    left: 3%; /* Réduit encore l'écart */
+  }
+  .nav-button.right {
+    right: 3%;
+  }
+}
